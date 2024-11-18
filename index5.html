@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style5.css">
+    <title>Вход</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <h2 class="active"> Вход </h2>
+                <div class="fadeIn first">
+                    <img src="people.png" id="icon" alt="User Icon" />
+                </div>
+                <form action="login.php" method="post">
+                    <input class="oval-lg" name="login" id="name" type="text" placeholder="Имя" />
+                    <input class="oval-lg" name="password" id="password" type="password" placeholder="Пароль" /> 
+                    <span class="password-toggle" onclick="togglePasswordVisibility()"><i class="fa fa-eye"></i></span>
+                    <button id="link-button" type="submit" class="oval-lg">Войти</button>
+                </form>
+                <a class="reg" href="index1.html">Регистрация</a>
+            </div>
+        </div>
+        <script>
+            function togglePasswordVisibility() {
+                var passwordInput = document.getElementById("password");
+                var icon = document.querySelector(".password-toggle i");
+                
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    icon.classList.remove("fa-eye");
+                    icon.classList.add("fa-eye-slash"); 
+                } else {
+                    passwordInput.type = "password";
+                    icon.classList.remove("fa-eye-slash");
+                    icon.classList.add("fa-eye"); 
+                }
+            }
+        </script>
+        <script src="https://kit.fontawesome.com/your_fontawesome_kit_id.js" crossorigin="anonymous"></script>
+        <script src="http://telegram.org/js/telegram-web-app.js"></script>
+    </div>
+</body>
+</html>
